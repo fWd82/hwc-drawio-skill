@@ -32,10 +32,11 @@ The header and footer are included by default, even for small architectures. The
 
 ## Requirements
 
-- Git
 - Python 3.10 or later
 - Codex, Claude Code, Cursor, or Google Antigravity
 - diagrams.net / Draw.io for opening and editing the generated file
+- Node.js 18 or later with npm for the recommended `npx skills` installer
+- Git only when using one of the manual installation methods
 
 The generator uses only the Python standard library. On macOS or Linux, use `python3` instead of `python` if that is the name of your Python executable.
 
@@ -55,23 +56,63 @@ hwc-drawio-skill/
 
 ## Installation
 
-Replace `fWd82` in the commands below with the GitHub account or organization that hosts this repository.
+### Recommended: install with the Skills CLI
+
+The quickest cross-agent installation uses the open-source [`skills` CLI](https://github.com/vercel-labs/skills). Run this from the project where you want the skill available:
+
+```bash
+npx skills add fWd82/hwc-drawio-skill
+```
+
+The installer discovers the skill, asks which supported agent(s) to target, and lets you choose its installation method. Project scope is the default. Use `-g` when you want the skill available across projects.
+
+For a direct, non-interactive install to a specific agent:
+
+| Agent | Project installation | Global installation |
+| --- | --- | --- |
+| Codex | `npx skills add fWd82/hwc-drawio-skill -a codex -y` | `npx skills add fWd82/hwc-drawio-skill -g -a codex -y` |
+| Claude Code | `npx skills add fWd82/hwc-drawio-skill -a claude-code -y` | `npx skills add fWd82/hwc-drawio-skill -g -a claude-code -y` |
+| Cursor | `npx skills add fWd82/hwc-drawio-skill -a cursor -y` | `npx skills add fWd82/hwc-drawio-skill -g -a cursor -y` |
+| Google Antigravity | `npx skills add fWd82/hwc-drawio-skill -a antigravity -y` | `npx skills add fWd82/hwc-drawio-skill -g -a antigravity -y` |
+
+Useful Skills CLI commands:
+
+```bash
+npx skills list
+npx skills update hwc-drawio-skill
+npx skills remove hwc-drawio-skill
+```
+
+The Skills CLI currently documents these relevant destinations:
+
+| Agent | Project path | CLI global path |
+| --- | --- | --- |
+| Codex | `.agents/skills/` | `~/.codex/skills/` |
+| Claude Code | `.claude/skills/` | `~/.claude/skills/` |
+| Cursor | `.agents/skills/` | `~/.cursor/skills/` |
+| Google Antigravity | `.agents/skills/` | `~/.gemini/antigravity/skills/` |
+
+> **Codex path note:** OpenAI's native local-skill documentation lists `.agents/skills` for repository scope and `~/.agents/skills` for user scope. The third-party Skills CLI documents `~/.codex/skills` as its Codex global target. These are different installation mechanisms, so the manual instructions below follow OpenAI's native discovery paths while the CLI commands follow the CLI's target mapping.
+
+### Manual installation
+
+Use the following methods when you prefer to clone the repository yourself or cannot run `npx`.
 
 Repository URL used in the examples:
 
 ```text
-https://github.com/fWd82/HWC-DrawIO-Skill.git
+https://github.com/fWd82/hwc-drawio-skill.git
 ```
 
-### Codex
+### Manual installation: Codex
 
-Codex discovers personal skills under `~/.agents/skills` and repository-specific skills under `.agents/skills`.
+OpenAI documents repository skills under `.agents/skills` and user-level local skills under `~/.agents/skills`. The commands below use those native Codex discovery locations.
 
 #### Personal installation: macOS or Linux
 
 ```bash
 mkdir -p ~/.agents/skills
-git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
+git clone https://github.com/fWd82/hwc-drawio-skill.git \
   ~/.agents/skills/hwc-drawio-skill
 ```
 
@@ -79,7 +120,7 @@ git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
 
 ```powershell
 New-Item -ItemType Directory -Force "$HOME\.agents\skills" | Out-Null
-git clone https://github.com/fWd82/HWC-DrawIO-Skill.git `
+git clone https://github.com/fWd82/hwc-drawio-skill.git `
   "$HOME\.agents\skills\hwc-drawio-skill"
 ```
 
@@ -89,7 +130,7 @@ Run from the target project root:
 
 ```bash
 mkdir -p .agents/skills
-git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
+git clone https://github.com/fWd82/hwc-drawio-skill.git \
   .agents/skills/hwc-drawio-skill
 ```
 
@@ -97,7 +138,7 @@ PowerShell:
 
 ```powershell
 New-Item -ItemType Directory -Force ".agents\skills" | Out-Null
-git clone https://github.com/fWd82/HWC-DrawIO-Skill.git `
+git clone https://github.com/fWd82/hwc-drawio-skill.git `
   ".agents\skills\hwc-drawio-skill"
 ```
 
@@ -105,7 +146,7 @@ You can also ask Codex to install it:
 
 ```text
 Use $skill-installer to install the skill from
-https://github.com/fWd82/HWC-DrawIO-Skill
+https://github.com/fWd82/hwc-drawio-skill
 ```
 
 If Codex does not show the newly installed skill, restart Codex. Verify it with `/skills` or mention it directly:
@@ -116,7 +157,7 @@ $hwc-drawio-skill Create an editable Huawei Cloud architecture with two ECS inst
 
 Official reference: [OpenAI — Build skills](https://developers.openai.com/codex/skills)
 
-### Claude Code
+### Manual installation: Claude Code
 
 Claude Code loads personal skills from `~/.claude/skills` and project skills from `.claude/skills`.
 
@@ -124,7 +165,7 @@ Claude Code loads personal skills from `~/.claude/skills` and project skills fro
 
 ```bash
 mkdir -p ~/.claude/skills
-git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
+git clone https://github.com/fWd82/hwc-drawio-skill.git \
   ~/.claude/skills/hwc-drawio-skill
 ```
 
@@ -132,7 +173,7 @@ git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
 
 ```powershell
 New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null
-git clone https://github.com/fWd82/HWC-DrawIO-Skill.git `
+git clone https://github.com/fWd82/hwc-drawio-skill.git `
   "$HOME\.claude\skills\hwc-drawio-skill"
 ```
 
@@ -140,7 +181,7 @@ git clone https://github.com/fWd82/HWC-DrawIO-Skill.git `
 
 ```bash
 mkdir -p .claude/skills
-git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
+git clone https://github.com/fWd82/hwc-drawio-skill.git \
   .claude/skills/hwc-drawio-skill
 ```
 
@@ -154,7 +195,7 @@ Claude Code watches existing skill directories for changes. Restart Claude Code 
 
 Official reference: [Anthropic — Extend Claude with skills](https://code.claude.com/docs/en/skills)
 
-### Cursor
+### Manual installation: Cursor
 
 Cursor supports both `.agents/skills` and `.cursor/skills` at project and personal scope. Using `.agents/skills` is convenient when sharing the same installation with Codex.
 
@@ -162,7 +203,7 @@ Cursor supports both `.agents/skills` and `.cursor/skills` at project and person
 
 ```bash
 mkdir -p ~/.agents/skills
-git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
+git clone https://github.com/fWd82/hwc-drawio-skill.git \
   ~/.agents/skills/hwc-drawio-skill
 ```
 
@@ -170,7 +211,7 @@ git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
 
 ```bash
 mkdir -p .agents/skills
-git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
+git clone https://github.com/fWd82/hwc-drawio-skill.git \
   .agents/skills/hwc-drawio-skill
 ```
 
@@ -189,7 +230,7 @@ Invoke the skill through natural language or explicitly:
 
 Official reference: [Cursor — Agent Skills](https://cursor.com/docs/skills)
 
-### Google Antigravity
+### Manual installation: Google Antigravity
 
 Antigravity uses `.agents/skills` for workspace-specific skills and `~/.gemini/config/skills` for global skills.
 
@@ -197,7 +238,7 @@ Antigravity uses `.agents/skills` for workspace-specific skills and `~/.gemini/c
 
 ```bash
 mkdir -p ~/.gemini/config/skills
-git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
+git clone https://github.com/fWd82/hwc-drawio-skill.git \
   ~/.gemini/config/skills/hwc-drawio-skill
 ```
 
@@ -205,7 +246,7 @@ git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
 
 ```powershell
 New-Item -ItemType Directory -Force "$HOME\.gemini\config\skills" | Out-Null
-git clone https://github.com/fWd82/HWC-DrawIO-Skill.git `
+git clone https://github.com/fWd82/hwc-drawio-skill.git `
   "$HOME\.gemini\config\skills\hwc-drawio-skill"
 ```
 
@@ -213,7 +254,7 @@ git clone https://github.com/fWd82/HWC-DrawIO-Skill.git `
 
 ```bash
 mkdir -p .agents/skills
-git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
+git clone https://github.com/fWd82/hwc-drawio-skill.git \
   .agents/skills/hwc-drawio-skill
 ```
 
@@ -383,13 +424,19 @@ See [references/specification.md](references/specification.md) for the complete 
 
 ## Updating
 
-Update a Git-based installation with:
+For an installation managed by the Skills CLI:
+
+```bash
+npx skills update hwc-drawio-skill
+```
+
+For a manual Git installation, pull from its installed directory:
 
 ```bash
 git -C ~/.agents/skills/hwc-drawio-skill pull --ff-only
 ```
 
-Use the appropriate installation path for Claude Code or Antigravity.
+Use the appropriate manual installation path for Claude Code, Cursor, or Antigravity.
 
 PowerShell example:
 
@@ -401,14 +448,20 @@ After updating, rerun the unit tests. Restart the agent if it does not detect th
 
 ## Uninstalling
 
-Delete the installed `hwc-drawio-skill` directory from the relevant skills location:
+For an installation managed by the Skills CLI:
+
+```bash
+npx skills remove hwc-drawio-skill
+```
+
+For a manual installation, delete the `hwc-drawio-skill` directory from the relevant native skills location:
 
 - Codex: `~/.agents/skills/hwc-drawio-skill`
 - Claude Code: `~/.claude/skills/hwc-drawio-skill`
 - Cursor: `~/.agents/skills/hwc-drawio-skill` or `~/.cursor/skills/hwc-drawio-skill`
 - Antigravity: `~/.gemini/config/skills/hwc-drawio-skill`
 
-Project-specific installations are under `.agents/skills/hwc-drawio-skill` or `.claude/skills/hwc-drawio-skill` in the project.
+Project-specific installations are under `.agents/skills/hwc-drawio-skill` or `.claude/skills/hwc-drawio-skill` in the project. Skills CLI global paths are listed in the installation table above.
 
 ## Troubleshooting
 
