@@ -4,6 +4,12 @@ Generate self-contained, editable [diagrams.net / Draw.io](https://www.diagrams.
 
 This repository is an Agent Skill that can be installed in Codex, Claude Code, Cursor, and Google Antigravity. It converts a natural-language Huawei Cloud architecture request into a JSON specification and then uses a deterministic Python generator to produce valid `.drawio` XML.
 
+## Quick Installation
+```bash
+npx skills add fWd82/hwc-drawio-skill
+```
+## Screenshot
+
 ![Huawei Cloud architecture example](samples/two-ecs-rds-obs-portal-preview.png)
 
 ## Highlights
