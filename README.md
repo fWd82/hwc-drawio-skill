@@ -12,6 +12,10 @@ npx skills add fWd82/hwc-drawio-skill
 
 ![Huawei Cloud architecture example](samples/two-ecs-rds-obs-portal-preview.png)
 
+and 
+
+![Huawei Cloud architecture example](samples/test-hwc.png)
+
 ## Highlights
 
 - Bundled color Huawei Cloud service icons with no external image URLs.
