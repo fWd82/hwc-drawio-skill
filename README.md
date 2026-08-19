@@ -248,23 +248,23 @@ Expected results include:
 After installation, ask the agent naturally. Examples:
 
 ```text
-Create an editable Huawei Cloud architecture with two ECS servers,
+/hwc-drawio-skill Create an editable Huawei Cloud architecture with two ECS servers,
 one RDS database, and one OBS bucket. Both servers use RDS and OBS.
 ```
 
 ```text
-Generate a multi-AZ Huawei Cloud web architecture with a public ELB,
+/hwc-drawio-skill Generate a multi-AZ Huawei Cloud web architecture with a public ELB,
 application ECS instances, and RDS for MySQL. Label known protocols,
 but do not invent CIDRs or security rules.
 ```
 
 ```text
-Create a CCE architecture inside a Huawei Cloud VPC with two subnets.
+/hwc-drawio-skill Create a CCE architecture inside a Huawei Cloud VPC with two subnets.
 Keep the standard title and reference footer.
 ```
 
 ```text
-Generate the diagram without the standard reference header and footer.
+/hwc-drawio-skill Generate the diagram without the standard reference header and footer.
 I want a clean canvas.
 ```
 
