@@ -10,11 +10,17 @@ npx skills add fWd82/hwc-drawio-skill
 ```
 ## Screenshot
 
-![Huawei Cloud architecture example](samples/two-ecs-rds-obs-portal-preview.png)
+#### Example 1
 
-and 
+![Huawei Cloud architecture example 1](samples/two-ecs-rds-obs-portal-preview.png)
 
-![Huawei Cloud architecture example](samples/test-hwc.png)
+#### Example 2
+
+![Huawei Cloud architecture example 2](samples/huawei-cloud-ha-web-architecture.png)
+
+#### Example 3
+
+![Huawei Cloud architecture example 3](samples/test-hwc.png)
 
 ## Highlights
 
