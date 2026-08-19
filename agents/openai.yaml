@@ -1,0 +1,4 @@
+interface:
+  display_name: "Huawei Cloud Draw.io"
+  short_description: "Generate Huawei Cloud architecture diagrams"
+  default_prompt: "Use $hwc-drawio-skill to create an editable Huawei Cloud Draw.io architecture diagram."

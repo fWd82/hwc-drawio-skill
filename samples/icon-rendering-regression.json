@@ -1,0 +1,87 @@
+{
+  "title": "Huawei Cloud icon rendering regression",
+  "page": {
+    "width": 1200,
+    "height": 700
+  },
+  "groups": [
+    {
+      "id": "cloud",
+      "type": "Huawei Cloud",
+      "label": "Huawei Cloud",
+      "x": 80,
+      "y": 60,
+      "width": 1020,
+      "height": 520
+    },
+    {
+      "id": "vpc",
+      "type": "Virtual Private Cloud (VPC)",
+      "label": "Icon rendering test VPC",
+      "x": 60,
+      "y": 70,
+      "width": 900,
+      "height": 360,
+      "parent": "cloud"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "elb",
+      "icon": "Elastic Load Balance (ELB)",
+      "label": "Elastic Load Balance (ELB)",
+      "x": 130,
+      "y": 140,
+      "width": 96,
+      "height": 96,
+      "parent": "vpc"
+    },
+    {
+      "id": "ecs",
+      "icon": "Elastic Cloud Server (ECS)",
+      "label": "Elastic Cloud Server (ECS)",
+      "x": 400,
+      "y": 140,
+      "width": 96,
+      "height": 96,
+      "parent": "vpc"
+    },
+    {
+      "id": "rds",
+      "icon": "RDS for MySQL",
+      "label": "RDS for MySQL",
+      "x": 670,
+      "y": 140,
+      "width": 96,
+      "height": 96,
+      "parent": "vpc"
+    }
+  ],
+  "edges": [
+    {
+      "from": "elb",
+      "to": "ecs",
+      "label": "HTTP :8080"
+    },
+    {
+      "from": "ecs",
+      "to": "rds",
+      "label": "MySQL :3306"
+    }
+  ],
+  "notes": [
+    {
+      "id": "purpose",
+      "text": "Regression sample: ELB, ECS, and RDS for MySQL must render as embedded Huawei Cloud SVG icons.",
+      "x": 200,
+      "y": 285,
+      "width": 520,
+      "height": 50,
+      "parent": "vpc"
+    }
+  ],
+  "reference": {
+    "customer": "Example Customer",
+    "subtitle": "Reference Solution Architecture"
+  }
+}
