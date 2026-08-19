@@ -55,12 +55,12 @@ hwc-drawio-skill/
 
 ## Installation
 
-Replace `YOUR_GITHUB_USERNAME` in the commands below with the GitHub account or organization that hosts this repository.
+Replace `fWd82` in the commands below with the GitHub account or organization that hosts this repository.
 
 Repository URL used in the examples:
 
 ```text
-https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill.git
+https://github.com/fWd82/HWC-DrawIO-Skill.git
 ```
 
 ### Codex
@@ -71,7 +71,7 @@ Codex discovers personal skills under `~/.agents/skills` and repository-specific
 
 ```bash
 mkdir -p ~/.agents/skills
-git clone https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill.git \
+git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
   ~/.agents/skills/hwc-drawio-skill
 ```
 
@@ -79,7 +79,7 @@ git clone https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill.git \
 
 ```powershell
 New-Item -ItemType Directory -Force "$HOME\.agents\skills" | Out-Null
-git clone https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill.git `
+git clone https://github.com/fWd82/HWC-DrawIO-Skill.git `
   "$HOME\.agents\skills\hwc-drawio-skill"
 ```
 
@@ -89,7 +89,7 @@ Run from the target project root:
 
 ```bash
 mkdir -p .agents/skills
-git clone https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill.git \
+git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
   .agents/skills/hwc-drawio-skill
 ```
 
@@ -97,7 +97,7 @@ PowerShell:
 
 ```powershell
 New-Item -ItemType Directory -Force ".agents\skills" | Out-Null
-git clone https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill.git `
+git clone https://github.com/fWd82/HWC-DrawIO-Skill.git `
   ".agents\skills\hwc-drawio-skill"
 ```
 
@@ -105,7 +105,7 @@ You can also ask Codex to install it:
 
 ```text
 Use $skill-installer to install the skill from
-https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill
+https://github.com/fWd82/HWC-DrawIO-Skill
 ```
 
 If Codex does not show the newly installed skill, restart Codex. Verify it with `/skills` or mention it directly:
@@ -124,7 +124,7 @@ Claude Code loads personal skills from `~/.claude/skills` and project skills fro
 
 ```bash
 mkdir -p ~/.claude/skills
-git clone https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill.git \
+git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
   ~/.claude/skills/hwc-drawio-skill
 ```
 
@@ -132,7 +132,7 @@ git clone https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill.git \
 
 ```powershell
 New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null
-git clone https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill.git `
+git clone https://github.com/fWd82/HWC-DrawIO-Skill.git `
   "$HOME\.claude\skills\hwc-drawio-skill"
 ```
 
@@ -140,7 +140,7 @@ git clone https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill.git `
 
 ```bash
 mkdir -p .claude/skills
-git clone https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill.git \
+git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
   .claude/skills/hwc-drawio-skill
 ```
 
@@ -162,7 +162,7 @@ Cursor supports both `.agents/skills` and `.cursor/skills` at project and person
 
 ```bash
 mkdir -p ~/.agents/skills
-git clone https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill.git \
+git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
   ~/.agents/skills/hwc-drawio-skill
 ```
 
@@ -170,7 +170,7 @@ git clone https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill.git \
 
 ```bash
 mkdir -p .agents/skills
-git clone https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill.git \
+git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
   .agents/skills/hwc-drawio-skill
 ```
 
@@ -197,7 +197,7 @@ Antigravity uses `.agents/skills` for workspace-specific skills and `~/.gemini/c
 
 ```bash
 mkdir -p ~/.gemini/config/skills
-git clone https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill.git \
+git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
   ~/.gemini/config/skills/hwc-drawio-skill
 ```
 
@@ -205,7 +205,7 @@ git clone https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill.git \
 
 ```powershell
 New-Item -ItemType Directory -Force "$HOME\.gemini\config\skills" | Out-Null
-git clone https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill.git `
+git clone https://github.com/fWd82/HWC-DrawIO-Skill.git `
   "$HOME\.gemini\config\skills\hwc-drawio-skill"
 ```
 
@@ -213,7 +213,7 @@ git clone https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill.git `
 
 ```bash
 mkdir -p .agents/skills
-git clone https://github.com/YOUR_GITHUB_USERNAME/HWC-DrawIO-Skill.git \
+git clone https://github.com/fWd82/HWC-DrawIO-Skill.git \
   .agents/skills/hwc-drawio-skill
 ```
 
